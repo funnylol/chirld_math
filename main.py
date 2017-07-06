@@ -25,14 +25,14 @@ def create_math(count,start1,stop1,start2,stop2,math):
                 h = random.randint(start2,stop2)
                 print(str(i) + ' ' + math + ' ' + str(h) + ' =____')
         if math=='÷':
-            while True:
+            while True:  #使用条件表达式失败
                 if count < 0:
                     break
                 else:
                     i = random.randint(start1,stop1)
                     h = random.randint(start2,stop2)
                     if i > h and i != 0:
-                        r = i % h
+                        r = i % h    #筛选出结果为整数的除法，能被除尽
                         if r == 0:
                             count -= 1
                             print(str(i) + ' ' + math + ' ' + str(h) + ' =____')
